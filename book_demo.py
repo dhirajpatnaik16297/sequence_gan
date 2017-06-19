@@ -74,7 +74,7 @@ def get_trainable_model(num_emb):
 
 def get_random_sequence(token_stream, word2idx):
     """Returns random subsequence."""
-    start_idx = random.randint(0, len(token_stream) - SEQ_LENGTH)
+    start_idx = random.randint( len(token_stream) - SEQ_LENGTH,0)
     return [word2idx[tok] for tok in token_stream[start_idx:start_idx + SEQ_LENGTH]]
 
 
